@@ -30,7 +30,6 @@ function createTaskCard(task) {
 
 
 // Todo: create a function to render the task list and make cards draggable
-// Function to render the task list and make cards draggable
 function renderTaskList() {
     // FOr clearing existing task cards
     $('#todo-cards').empty();
