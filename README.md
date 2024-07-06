@@ -31,7 +31,6 @@ When the delete button is clicked, the task is removed from the board and will n
 WHen the page is refreshed, the saved tasks persist
 
 SOURCES + ACKNOWLEWDGEMENTS
-Modal resources
 https://www.youtube.com/watch?v=kjIS3JnrE9E&themeRefresh=1
 https://www.freecodecamp.org/news/how-to-build-a-modal-with-javascript/
 https://www.w3schools.com/howto/howto_css_modals.asp
@@ -47,10 +46,4 @@ https://getbootstrap.com/docs/3.4/javascript/
 https://getbootstrap.com/docs/3.4/javascript/#modals
 
 ```
-## Screenshots
-```
-
-<img width="738" alt="Screenshot 2024-07-06 at 12 59 17 PM" src="https://github.com/chrispychips12/personal-task-board/assets/94519893/92dc0941-ee80-4599-b233-1b15e4ba51cd">
-<img width="1470" alt="Screenshot 2024-07-06 at 12 58 51 PM" src="https://github.com/chrispychips12/personal-task-board/assets/94519893/48a7f34b-0ed6-4760-8f6c-3fa7f5e6f152">
-<img width="1470" alt="Screenshot 2024-07-06 at 1 06 28 PM" src="https://github.com/chrispychips12/personal-task-board/assets/94519893/097da715-7d20-4e50-a5bc-213978967868">
 
