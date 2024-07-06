@@ -29,9 +29,51 @@ function createTaskCard(task) {
   
 
 // Todo: create a function to render the task list and make cards draggable
+// Function to render the task list and make cards draggable
 function renderTaskList() {
-
-}
+    // FOr clearing existing task cards
+    $('#todo-cards').empty();
+    $('#in-progress-cards').empty();
+    $('#done-cards').empty();
+  
+    // Iteratation over taskList + create new task cards
+    taskList.forEach(task => {
+      const taskCard = createTaskCard(task);
+      if (task.status === 'to-do') {
+        $('#todo-cards').append(taskCard);
+      } else if (task.status === 'in-progress') {
+        $('#in-progress-cards').append(taskCard);
+      } else if (task.status === 'done') {
+        $('#done-cards').append(taskCard);
+      }
+    });
+  
+    // Made task cards draggable
+    // https://jqueryui.com/draggable/
+    // https://api.jqueryui.com/draggable/
+    // https://www.tutorialspoint.com/jqueryui/jqueryui_draggable.htm
+    $('.card').draggable({
+      revert: "invalid",
+      helper: "clone",
+      start: function (event, ui) {
+        $(this).hide();
+      },
+      stop: function (event, ui) {
+        $(this).show();
+      }
+    });
+  
+    // + also droppable
+    // https://jqueryui.com/droppable/
+    // https://www.tutorialspoint.com/jqueryui/jqueryui_droppable.htm
+    $('.lane').droppable({
+      accept: ".card",
+      drop: function (event, ui) {
+        handleDrop(event, ui);
+      }
+    });
+  }
+  
 
 // Todo: create a function to handle adding a new task
 function handleAddTask(event){
