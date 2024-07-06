@@ -107,9 +107,18 @@ $('#taskForm').on('submit', handleAddTask);
 
 
 // Todo: create a function to handle deleting a task
+// https://getbootstrap.com/docs/3.4/javascript/
+// https://getbootstrap.com/docs/3.4/javascript/#modals
 function handleDeleteTask(event) {
+    const taskId = $(event.target).closest('.card').data('id');
+    taskList = taskList.filter(task => task.id !== taskId);
+    localStorage.setItem('tasks', JSON.stringify(taskList));
+    renderTaskList();
+  }
+  
 
-}
+  $(document).on('click', '.btn-danger', handleDeleteTask);
+  
 
 // Todo: create a function to handle dropping a task into a new status lane
 function handleDrop(event, ui) {
