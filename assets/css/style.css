@@ -30,3 +30,8 @@ body {
   color: white;
 }
 
+.bg-white {
+  background-color: #ffffff !important;
+  color: black;
+}
+

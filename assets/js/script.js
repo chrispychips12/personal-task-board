@@ -25,9 +25,12 @@ function createTaskCard(task) {
     const deleteButton = $('<button>').addClass('btn btn-danger btn-sm').text('Delete');
 
     // Determine the card color based on the deadline
+    // https://day.js.org/en/ 
     const today = dayjs().startOf('day');
     const deadline = dayjs(task.deadline).startOf('day');
-    if (deadline.isBefore(today)) {
+    if (task.status === 'done') {
+        card.addClass('bg-white');
+    } else if (deadline.isBefore(today)) {
         card.addClass('bg-danger text-white');
     } else if (deadline.isSame(today)) {
         card.addClass('bg-warning');
