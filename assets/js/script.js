@@ -10,7 +10,6 @@ function generateTaskId() {
     return id;
 }
 
-
 // Todo: create a function to create a task card
 function createTaskCard(task) {
     const card = $('<div>').addClass('card mb-3').attr('data-id', task.id);
@@ -23,10 +22,8 @@ function createTaskCard(task) {
     // Different styling added to each class for visual element, can distinguish each section clearly
     cardBody.append(cardTitle, cardDescription, cardDeadline, deleteButton);
     card.append(cardBody);
-
     return card;
 }
-
 
 // Todo: create a function to render the task list and make cards draggable
 function renderTaskList() {
@@ -73,7 +70,6 @@ function renderTaskList() {
     });
 }
 
-
 // Todo: create a function to handle adding a new task
 // https://stackoverflow.com/questions/22195065/how-to-send-a-json-object-using-html-form-data
 // https://stackoverflow.com/questions/67088439/what-event-handler-should-i-use-for-modal-form-to-send-an-email
@@ -94,7 +90,6 @@ function handleAddTask(event) {
         status: 'to-do'
     };
 
-
     taskList.push(newTask); // Add task
     localStorage.setItem('tasks', JSON.stringify(taskList)); // Save new task 
     renderTaskList(); // Redner new task
@@ -103,7 +98,6 @@ function handleAddTask(event) {
     $('#formModal').modal('hide');
 }
 $('#taskForm').on('submit', handleAddTask);
-
 
 // Todo: create a function to handle deleting a task
 // https://getbootstrap.com/docs/3.4/javascript/
@@ -114,9 +108,7 @@ function handleDeleteTask(event) {
     localStorage.setItem('tasks', JSON.stringify(taskList));
     renderTaskList();
 }
-
 $(document).on('click', '.btn-danger', handleDeleteTask);
-
 
 // Todo: create a function to handle dropping a task into a new status lane
 function handleDrop(event, ui) {
@@ -124,23 +116,22 @@ function handleDrop(event, ui) {
     const newStatus = $(event.target).attr('id');
     const task = taskList.find(task => task.id === taskId);
     if (task) {
-      task.status = newStatus;
+        task.status = newStatus;
     }
-  
+
     // Save updated taskList to localStorage
     localStorage.setItem('tasks', JSON.stringify(taskList));
     renderTaskList();
-  }
+}
 
 // Todo: when the page loads, render the task list, add event listeners, make lanes droppable, and make the due date field a date picker
-  // Make lanes droppable 
-  // https://stackoverflow.com/questions/54649123/how-to-make-bootstrap-4-drop-down-with-json-data
-  // https://forum.getkirby.com/t/create-and-edit-json-from-frontend-for-drag-drop-tool-purpose/25291
-  $(document).ready(function () {
+// Make lanes droppable 
+// https://stackoverflow.com/questions/54649123/how-to-make-bootstrap-4-drop-down-with-json-data
+// https://forum.getkirby.com/t/create-and-edit-json-from-frontend-for-drag-drop-tool-purpose/25291
+$(document).ready(function () {
     renderTaskList();
     $('.lane').droppable({
-      accept: ".card",
-      drop: handleDrop
+        accept: ".card",
+        drop: handleDrop
     });
-  });
-  
+});
