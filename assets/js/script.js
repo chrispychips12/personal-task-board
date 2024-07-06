@@ -1,6 +1,6 @@
 // Retrieve tasks and nextId from localStorage
-let taskList = JSON.parse(localStorage.getItem("tasks"));
-let nextId = JSON.parse(localStorage.getItem("nextId"));
+let taskList = JSON.parse(localStorage.getItem("tasks")) || [];
+let nextId = JSON.parse(localStorage.getItem("nextId")) || 1;
 
 // Todo: create a function to generate a unique task id
 function generateTaskId() {
@@ -12,7 +12,6 @@ function generateTaskId() {
 
 
 // Todo: create a function to create a task card
-// Function to create a task card
 function createTaskCard(task) {
     const card = $('<div>').addClass('card mb-3').attr('data-id', task.id);
     const cardBody = $('<div>').addClass('card-body');
@@ -134,6 +133,14 @@ function handleDrop(event, ui) {
   }
 
 // Todo: when the page loads, render the task list, add event listeners, make lanes droppable, and make the due date field a date picker
-$(document).ready(function () {
-
-});
+  // Make lanes droppable 
+  // https://stackoverflow.com/questions/54649123/how-to-make-bootstrap-4-drop-down-with-json-data
+  // https://forum.getkirby.com/t/create-and-edit-json-from-frontend-for-drag-drop-tool-purpose/25291
+  $(document).ready(function () {
+    renderTaskList();
+    $('.lane').droppable({
+      accept: ".card",
+      drop: handleDrop
+    });
+  });
+  
