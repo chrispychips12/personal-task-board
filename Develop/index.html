@@ -68,6 +68,41 @@
     integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
 
   <script src="./assets/js/script.js"></script>
+  <!--Modal resources-->
+  <!--https://www.youtube.com/watch?v=kjIS3JnrE9E&themeRefresh=1-->
+  <!--https://www.freecodecamp.org/news/how-to-build-a-modal-with-javascript/-->
+  <!--https://www.w3schools.com/howto/howto_css_modals.asp-->
+  <!--https://docs.joomla.org/creating_a_modal_form_field-->
+  <!--https://getbootstrap.com/docs/4.0/components/modal/-->
+  <!--https://mdbootstrap.com/docs/standard/extended/modal-form/-->
+
+  <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="formModalLabel">Add New Task</h5> <!--Form Title-->
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="taskForm">
+            <div class="mb-3">
+              <label for="taskTitle" class="form-label">Title</label><!--Task title form input-->
+              <input type="text" class="form-control" id="taskTitle" required>
+            </div>
+            <div class="mb-3">
+              <label for="taskDescription" class="form-label">Description</label> <!--Description form input-->
+              <textarea class="form-control" id="taskDescription" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="taskDeadline" class="form-label">Deadline</label> <!--Deadline form input-->
+              <input type="date" class="form-control" id="taskDeadline" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Save Task</button> <!-- Save button-->
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
