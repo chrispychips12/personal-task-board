@@ -43,9 +43,11 @@ https://stackoverflow.com/questions/67088439/what-event-handler-should-i-use-for
 https://getbootstrap.com/docs/3.4/javascript/
 https://getbootstrap.com/docs/3.4/javascript/#modals
 
-
+```
 ## Screenshots
+```
 
-<img width="738" alt="Screenshot 2024-07-06 at 12 59 17 PM" src="https://github.com/chrispychips12/personal-task-board/assets/94519893/8deff5d6-08b1-4254-b2a4-dde938a85bd9">
-<img width="1470" alt="Screenshot 2024-07-06 at 12 58 51 PM" src="https://github.com/chrispychips12/personal-task-board/assets/94519893/b7df915e-fdec-4cd5-81df-c73f9c1f0860">
-<img width="1470" alt="Screenshot 2024-07-06 at 1 06 28 PM" src="https://github.com/chrispychips12/personal-task-board/assets/94519893/888542b7-2f57-4d7d-b92b-ecffa492e43b">
+<img width="738" alt="Screenshot 2024-07-06 at 12 59 17 PM" src="https://github.com/chrispychips12/personal-task-board/assets/94519893/92dc0941-ee80-4599-b233-1b15e4ba51cd">
+<img width="1470" alt="Screenshot 2024-07-06 at 12 58 51 PM" src="https://github.com/chrispychips12/personal-task-board/assets/94519893/48a7f34b-0ed6-4760-8f6c-3fa7f5e6f152">
+<img width="1470" alt="Screenshot 2024-07-06 at 1 06 28 PM" src="https://github.com/chrispychips12/personal-task-board/assets/94519893/097da715-7d20-4e50-a5bc-213978967868">
+
