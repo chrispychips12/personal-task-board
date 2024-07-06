@@ -11,9 +11,22 @@ function generateTaskId() {const id = nextId;
 
 
 // Todo: create a function to create a task card
+// Function to create a task card
 function createTaskCard(task) {
+    const card = $('<div>').addClass('card mb-3').attr('data-id', task.id);
+    const cardBody = $('<div>').addClass('card-body');
+    const cardTitle = $('<h5>').addClass('card-title').text(task.title);
+    const cardDescription = $('<p>').addClass('card-text').text(task.description);
+    const cardDeadline = $('<p>').addClass('card-text').text('Deadline: ' + task.deadline);
+    const deleteButton = $('<button>').addClass('btn btn-danger btn-sm').text('Delete');
+    // All  the variables created as per HTML, and Acceptance Criteria
+    // Different styling added to each class for visual element, can distinguish each section clearly
+    cardBody.append(cardTitle, cardDescription, cardDeadline, deleteButton);
+    card.append(cardBody);
 
-}
+    return card;
+  }
+  
 
 // Todo: create a function to render the task list and make cards draggable
 function renderTaskList() {
