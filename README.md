@@ -5,6 +5,9 @@ I have created a simple task board application that allows a team to manage proj
 I used [Day.js](https://day.js.org/en/) library to work with dates. 
 
 PLEASE SEE IMAGE FILES FOR SCREENSHOTS
+<img width="738" alt="Screenshot 2024-07-06 at 12 59 17 PM" src="https://github.com/chrispychips12/personal-task-board/assets/94519893/047881aa-120f-4f14-a1d5-4342d4a5e736">
+<img width="1470" alt="Screenshot 2024-07-06 at 12 58 51 PM" src="https://github.com/chrispychips12/personal-task-board/assets/94519893/b69f99b2-f1f1-4208-a6cc-0114d8467a88">
+<img width="1470" alt="Screenshot 2024-07-06 at 1 06 28 PM" src="https://github.com/chrispychips12/personal-task-board/assets/94519893/cd6fec20-5078-4b99-98c3-402ff9e04f75">
 
 ## User Story
 
