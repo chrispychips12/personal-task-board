@@ -1,5 +1,7 @@
 # Task Board
 
+DEPLOYED LINK: https://chrispychips12.github.io/personal-task-board/
+
 I have created a simple task board application that allows a team to manage project tasks by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
 I used [Day.js](https://day.js.org/en/) library to work with dates. 
